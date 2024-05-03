@@ -25,12 +25,13 @@
         background: linear-gradient(white, purple);
       }
       .title {
-        background-color: rgb(87, 139, 188);
+        background-color: rgb(87, 139, 188, 0.2);
         padding: 1.5%;
-        border: 2px solid black;
+        border: 2px solid rgb(49, 60, 117);
+        margin: 0%;
       }
       .heading {
-        background-color: rgb(30, 119, 202);
+        background-color: rgb(30, 119, 202, 0.5);
         width: 50%;
         padding: 0.5%;
         border-radius: 5px;
@@ -43,8 +44,89 @@
         width: 50%;
         padding: 0.5%;
         border-radius: 5px;
-        background-color: rgb(53, 123, 123);
+        background-color: rgb(53, 123, 123, 0.5);
         color: rgb(227, 216, 232);
+      }
+      .dropbtn {
+        background-color: rgb(127, 217, 255);
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropbtn1 {
+        background-color: rgb(57, 139, 169);
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+      }
+
+      .dropdown1 {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: rgb(127, 217, 255);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: rgb(127, 217, 255);
+      }
+      .dropdown-content1 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content1 a:hover {
+        background-color: rgb(57, 139, 169);
+      }
+
+      .dropdown1:hover .dropdown-content1 {
+        display: block;
+      }
+
+      .dropdown1:hover .dropbtn1 {
+        background-color: rgb(57, 139, 169);
       }
       .flights {
         background-color: rgb(127, 217, 255);
@@ -81,35 +163,73 @@
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
       }
+      body {
+        background-image: url("https://wallpapercave.com/wp/OqlqM2v.jpg");
+      }
     </style>
   </head>
   <body>
     .
     <div class="title">
       <center>
-        <h1 class="heading">Travel Eezy</h1>
+        <h1 class="heading">
+          <i class="fa-solid fa-route"></i> Travel Eezy
+          <i class="fa-solid fa-route fa-flip-horizontal"></i>
+        </h1>
       </center>
       <center>
-        <h2 class="slogan"><em>Why worry when you can Travel Eesy</em></h2>
+        <h2 class="slogan"><em>Why worry when you can Travel Eezy</em></h2>
       </center>
     </div>
 
     <div class="flights">
-      Flights
-      <i class="fa-solid fa-plane-departure"></i>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Flights<i class="fa-solid fa-plane-departure"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
     </div>
 
     <div class="hotels">
-      Hotels
-      <i class="fa-solid fa-hotel"></i>
-    </div>
-    <div class="trains">
-      Trains
-      <i class="fa-solid fa-train"></i>
+      <div class="dropdown">
+        <button class="dropbtn">Hotels<i class="fa-solid fa-hotel"></i></button>
+        <div class="dropdown-content">
+          <a href="#" font-size="5px"
+            ><span>Hotel</span>
+            <input
+              type="text"
+              required="required"
+              value=" Search for Hotels/Hostels"
+            />
+          </a>
+          <a href="#" font-size="5px"
+            >From:
+            <input type="text" required="required" value=" Date" />
+          </a>
+          <a href="#" font-size="5px"
+            >To:
+            <input type="text" required="required" value=" Date" />
+          </a>
+        </div>
+      </div>
     </div>
 
-    <img src="images/WhatsApp Image 2022-11-05 at 16.08.56.jpg" alt="" />
-    <img src="images/WhatsApp Image 2022-11-05 at 16.09.22.jpg" alt="" />
-    <img src="images/WhatsApp Image 2022-11-05 at 16.10.10.jpg" alt="" />
+    <div class="trains">
+      <div class="dropdown1">
+        <button class="dropbtn1">
+          Trains<i class="fa-solid fa-train"></i>
+        </button>
+        <div class="dropdown-content1">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
